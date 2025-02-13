@@ -1,3 +1,16 @@
 swomf.
 
-This was made from `fastfetch --pipe false`, an online ASCII text maker, and some hand-editing.
+This was made from `fastfetch --pipe false`,
+an online ASCII text maker, and some hand-editing.
+
+-----------
+|logo:    |  text: http://patorjk.com/software/taag.
+|         |  I used the Ogre and Slant fonts, with hand-edited color codes.
+|fastfetch|  ---------
+|ascii art|  Emoticon: I copied the emoticon from the web and changed
+|ascii art|            its spacing. I added the window by hand.
+|         |            True origin is unknown.
+|         |  
+|         |  The rest: I used fastfetch output and mixed it with
+|         |            agetty escape codes.
+----------
