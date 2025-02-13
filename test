@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+CDEF="\033[0m"      # default color
+b_CDEF="\033[1;37m" # bold default color
+b_CRER="\033[1;31m" # bold error color
+
+S="$(dirname "$(readlink -f "${0}")")"
+
+make -s -C "${S}"/src
+if [[ $? -ne 0 ]]; then
+  echo -e "${b_CRER} * ${b_CDEF}Failed to run make ${SCRIPT_DIR}${CDEF}"
+  exit 1
+fi
+
+"${S}"/src/watch "$1" 'agetty --show-issue --issue-file '$@
