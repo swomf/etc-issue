@@ -1,0 +1,24 @@
+
+**************************************
+* These special chars are specific   *
+* to agetty. They may not render     *
+* useful information on all systems. *
+**************************************
+
+\\e |
+[47;30m\\s | \s[0m
+\\n | \n
+[47;30m\\r | \r[0m
+\\v | \v
+[47;30m\\m | \m[0m
+\\o | \o
+[47;30m\\O | \O[0m
+\\d | \d
+[47;30m\\t | \t[0m
+\\l | \l
+[47;30m\\b | \b[0m
+\\S | \S
+[47;30m\\u | \u[0m
+\\U | \U
+[47;30m\\4 | \4[0m
+\\6 | \6
