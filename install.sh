@@ -28,7 +28,7 @@ if [ "$input" != "y" ] && [ "$input" != "Y" ]; then
 fi
 
 set -x
-sudo install "$1" /etc/issue
+sudo install "$1" -Dm644 /etc/issue
 set +x
 
 echo -e "${CGSC}Success.${CDEF} Installed $1 to /etc/issue."
