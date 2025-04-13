@@ -1,0 +1,39 @@
+In a Linux teletypewriter (TTY), there are only
+two chief charsets to create text art with. \e[33m(citation needed)\e[0m
+
+==> ASCII (i.e. "char" in C code) <==
+   0123456789ABCDEF
+0x \e[41m                \e[0m     * Unprintable characters such as 
+1x \e[41m                \e[0m       NUL or CR are marked in \e[31mred\e[0m \e[41m \e[0m.
+2x  !"#$%&'()*+,-./     * Character 20 is whitespace.
+3x 0123456789:;<=>?
+4x @ABCDEFGHIJKLMNO
+5x PQRSTUVWXYZ[\\]^_     * Within agetty rendering, a raw
+6x `abcdefghijklmno       backslash \\ should be escaped.
+7x pqrstuvwxyz{|}~\e[41m \e[0m
+
+
+==> CP437 (Code Page 437 - typically rendered as UTF8) <==
+   0123456789ABCDEF
+0x \e[41m \e[0m☺☻♥♦♣♠•◘○◙♂♀♪♫☼     * Rows 0x and 1x largely use symbols
+1x ►◄↕‼¶§▬↨↑↓→←∟↔▲▼       instead of ASCII control codes.
+2x  !"#$%&'()*+,-./     * CP437 rows 2x to 6x mirror ASCII.
+3x 0123456789:;<=>?
+4x @ABCDEFGHIJKLMNO
+5x PQRSTUVWXYZ[\\]^_
+6x `abcdefghijklmno
+7x pqrstuvwxyz{|}~⌂     * Row 7x mirrors ASCII except for 7F
+8x ÇüéâäàåçêëèïîìÄÅ     * Row 8x and on depart from ASCII
+9x ÉæÆôöòûùÿÖÜ¢£¥₧ƒ
+Ax áíóúñÑªº¿⌐¬½¼¡«»
+Bx ░▒▓│┤╡╢╖╕╣║╗╝╜╛┐     * Rows Bx to Dx are the famous "box
+Cx └┴┬├─┼╞╟╚╔╩╦╠═╬╧       drawing" characters, used in TUIs
+Dx ╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀       (terminal user interfaces) like btop.
+Ex αßΓπΣσµτΦΘΩδ∞φε∩
+Fx ≡±≥≤⌠⌡÷≈°∙·√ⁿ²■\e[41m \e[0m
+
+Not all diacritics are included.
+* Ä renders fine.       * À is rendered diacritic-less.
+
+If a TTY can't render a char, it uses the placeholder ■ (CP437's FE).
+* 3/4 character (iso_8859-1): ¾
