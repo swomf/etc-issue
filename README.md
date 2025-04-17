@@ -1,4 +1,4 @@
-# etc-issue
+# etc-issuer
 
 On Linux startup, if you don't use a splash screen,
 `/sbin/agetty` will display the contents of `/etc/issue`
